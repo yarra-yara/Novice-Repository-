@@ -1,0 +1,457 @@
+Network plus
+
+Open Systems Interconnection Model
+A network is two or more computer systems that are linked by a transmission
+medium and share one or more protocols that enable them to exchange data.
+You
+can think of any network in terms of nodes and links. The nodes are the
+devices and the links are the communication pathways.
+A network will involve the use of many different protocols operating at different
+layers of the OSI model. When a protocol of one node at a specific layer
+interacts with its equivalent in another node, we call it same layer interaction.
+To transmit or receive a
+communication, on each node, each layer provides services for the layer above
+and
+uses the services of the layer below. This is referred to as adjacent layer
+interaction.
+
+Data encapsulation and decapsulation. The stack of headers is called a
+protocol data unit ( PDU ).
+Network Data Transmission
+All network signaling uses electromagnetic radiation of one type or another.
+Electromagnetic radiation means transmitting signals as electric current, infrared
+light, or radio waves.
+We have two main categories ( or types ) of cables :
+Copper cable
+It is used to transmit electrical signals. We have twisted pair copper cables and
+coaxial (coax ) copper cables. Copper cable suffers from high attenuation,
+meaning that the signal quickly loses strength over long links.
+Fiber optic cable
+Fiber optic cable carries very high frequency radiation in the infrared light part
+of the electromagnetic spectrum. The light signals are also not susceptible
+to interference or noise from other sources and less affected by attenuation.
+Consequently, fiber optic cable supports higher bandwidth over longer links
+than copper cable. Fiber optic cabling is divided into Single Mode (SMF) and
+MultiMode
+(MMF) types, and MMF is categorized by Optical Mode designations (OM1,
+OM2, OM3, and OM4).
+SMF is categorized into OS1 for indoor use and OS2 for outdoor use. SMF
+cables are usually yellow/lime in color. They are around 8-10 microns.
+MMF are orange or aqua in color ( OM1/OM2 orange and OM3/OM4 aqua ).
+Their connectors are beige, black and aqua for OM1, OM2, and, OM3/4
+respectively. We measure their diameter ( or thickness ) in microns. They are
+either 50 microns or 62.5 microns. Only OM1 is 62.5 microns. Along with OM2,
+they use LED for transmission. OM1 and OM2 are designed for 1Gbps
+applications. OM3 and OM4 support higher modulation ( transmit pulses rapidly
+) and are laser optimized.
+
+Fiber optic connecters:
+
+Local connector/ Luccent connector : much smaller than subscriber
+connectors. this small form factor is extremely popular nowadays as it’s small
+and space efficient. it has a duplex configuration
+Subscriber connector/Standard connector: a snap-on square connector with a
+simple pull-push motion. can be used for single or multi-mode. it uses a 2.5 mm
+ferrule while LC use 1.5 mm ferrule.
+Straight tip: used in legacy setups. it’s also large ( 2.5 mm ferrule ). has a twist
+on/off mechanism
+Mechanical transfer registered jack ( MT-RJ): they lock in place with a tab ( like
+-RJ cables )
+
+
+Ethernet Standards
+The most important standards developed over the years ,and which allow us to
+implement the various functions of the physical and data link layers are the
+802.3 Ethernet Standards by IEEE. Ethernet standards provide assurance that
+network cabling will meet the bandwidth
+requirements of applications. The standards specify the bit rate that should be
+achieved over different types of media up to the supported distance limitations.
+These Ethernet media specifications are named using a three-part convention,
+which is often referred to as xBASE-y. This describes:
+• The bit rate in megabits per second (Mbps) or gigabits per second (Gbps).
+• The signal mode (baseband or broadband). All mainstream types of Ethernet
+use baseband transmissions, so you will only see specifications of the form xBASE-y.
+
+• A designator for the media type.
+Gigabit Ethernet Standards
+Over copper wire, Gigabit Ethernet is specified as 1000BASE-T, working over
+Cat 5e or better. Gigabit Ethernet does not support hubs; it is implemented only
+using switches. The maximum distance of 100 m (328 feet) applies to cabling
+between the node and a switch port, or
+between two switch port
+What is the difference between fast ethernet and gigabit ethernet?
+In the past, the Ethernet standard was Fast Ethernet. This standard had a
+throughput of 100 Mbps. However, this standard was overtaken by the Gigabit
+Ethernet, which supports a throughput of 1,000 megabits or 1 gigabit per
+second. The latest is 10 Gigabit Ethernet with 10 times the throughput and
+becoming more important as users connect laptops, cell phones, tablets, and
+other smart devices to wireless Wi-Fi networks. 10 Gigabit Ethernet works well
+with CAT6, Cat6A and CAT8 cabling standards.
+Transmission of signals using Ethernet Cables:
+Ethernet cables transmit data using electrical signals. The signal is sent from
+the transmitter (TX) of one device to the receiver (RX) of another device. The
+TX and RX pins are assigned to different pairs of wires depending on the speed
+and standard of the Ethernet cable.
+
+Unshielded Twisted Pair considerations
+Twisted pair is a type of copper cable that has been extensively used for
+telephone systems and data networks. One pair of insulated wires twisted
+together forms a balanced pair. The pair carry the same signal but with
+different
+polarity; one wire is positive, and the other is negative. This allows the receiver
+to distinguish the signal from any noise more strongly.
+
+The pairs are twisted at different rates to reduce external interference and
+crosstalk. Crosstalk is a phenomenon whereby one pair causes interference in
+another as a result of their proximity.
+Twisted pair can use either solid or stranded conductor wires.
+The speed of a cable refers to the amount of data it can transmit per second. A
+cable's Category designation (e.g. Cat5e, Cat6, etc.) is an easy way to identify
+the speed of a cable.
+American wire gauge ( AWG)
+It is used to determine the thickness of a wire ( the cable’s conductor ).
+Electrical current encounters greater resistance when transmitted over thinner
+wire. The larger the conductor, the easier it is for the electrons to pass through
+it resulting in lower resistance, lower signal loss and greater transmission
+distance. Conductor gauge affects a cable's performance but is typically not
+the most important factor. Shielding and twist rate have more impact on signal
+strength and quality.
+>>Deploying ethernet cabling in a small office or enterprise
+
+In order to implement a cable system anywhere, we’ll have to adhere to a
+standardized methodology. We’ll utilize countless cable management tools and
+techniques to ensure that the cable system we wish to implement is easy to
+maintain.
+Summary: There are various subsystems that make up the cabling system
+within a building or network including the workspaces that connect nodes with
+the transmission mediums ( cables ), distribution frames that allow for the
+organization of cables at a centralized area, equipment room which houses
+core or complex/critical devices, etc. Components such as patch panels are
+important to understand. A patch panel is a passive device which connects
+cables of nodes on a network to a switch. It can also refer to the whole
+organized set up of a patch panel, cables, and switches.
+( TCI production videos are extremely helpful for this topic. They showcase
+how cabling actually works in real life on actual sites. )
+
+Network interface:
+A network interface card/controller connects the transmission medium ( cable )
+to the node (computer). It includes the MAC/hardware address of a device.
+It is also called the local address or physical address. According to IEEE
+terminology, it is the extended unique identifier ( EUI ). A MAC/EUI address is a
+48 bit (6 byte) identifier. The format of the number differs depending on the
+system architecture.
+
+At the data link layer or ethernet layer:
+Preamble+SDF: Used for clock synchronization plus to detect collisions early.
+Made up of alternating ones and zeros with the end of SDF made of two
+consecutive ones.
+Error Checking
+The error checking field contains a 32-bit (4-byte) checksum called a Cyclic
+Redundancy Check (CRC) or Frame Check Sequence (FCS). The CRC is calculated
+based on the contents of the frame; the receiving node performs the same
+calculation and, if it matches, accepts the frame.
+Frame length and maximum transmission unit:
+The payload can be between 46 and 1500 bytes. The upper limit is referred as
+the MTU.
+
+>>Packet sniffers and analyzers
+A packet sniffer is a software or hardware utility which captures packets
+traversing a network. Packet sniffing tools are used for a variety of purposes
+such as troubleshooting network issues, monitoring performance, and
+performing penetration tests. Software tools include tcpdump, a command line
+tool for linux. Its basic syntax is : tcpdump - i eth0 ( the interface which your
+device will listen on ). Another tool is Wireshark which offers a graphical user
+interface and Tshark which is its CLI counterpart. Other useful ones include
+ngrep ( github.com/jpr5/ )and ncat ( nmap.org/ncat ).
+>>Ethernet Switch types
+Various types that differ in terms of management/configuration, number of
+ports, ability to add ports to, stackability, and size depending on network.
+Configuring a switch: After connecting to the switch’s management interface,
+you can configure/change the settings of each port/interface of the switch.
+Most switch operating systems can operate in multiple modes.
+For example, Cisco IOS has three principal modes:
+• User EXEC mode—This is a read-only mode where commands can be used to
+report the configuration, show system status, or run basic troubleshooting
+tools.
+• Privileged EXEC mode/enable mode—This allows the user to reboot or shut
+down the appliance and to backup and restore the system configuration.
+• Global configuration mode—This allows the user to write configuration
+updates.
+Most switch CLIs also support TAB and/or use of ? to list different ways to
+complete a partial instruction.
+>>MAC address table
+A switch learns MAC addresses by reading the source address when a frame is
+received on a port. The address mapping for that port is normally cached in a
+MAC address table. The address table is implemented as content addressable
+memory (CAM), a special type of memory optimized for searching, rather than random
+access.
+Consequently, the MAC address table is often also referred to as the CAM
+table. Entries
+remain in the MAC address table for a period before being flushed. This
+ensures problems are not encountered when network cards (MAC addresses) are
+changed.
+If a MAC address cannot be found in the MAC address table, then the switch
+acts like a hub and transmits the frame out of all the ports, except for the source
+port.
+This is referred to as flooding.
+You can query the MAC address table of a switch using this command:
+show mac address-table
+Port Security:
+It is important to secure switch ports on a LAN as unauthorized physical access
+to the switch can make the network vulnerable to various attacks. Configuring
+port security includes setting static MAC addresses, logging in case of violation
+of policies, or allowing the port to learn and accept a certain number of sticky
+addresses.
+Port Aggregation:
+Also referred to as bonding, port aggregation is the process of combining two
+separate cables into a single logical channel. It is often implemented using the
+LACP protocol ( Link Aggregation Control Protocol ).
+Port mirroring:
+Copying all traffic sent across a LAN using a switch to a mirror ( destined ) port.
+It is implemented in order to capture and analyze network activity. On a cisco
+switch, this is referred to as a SPAN ( Switched Port Analyzer ). The mirror port
+is used by a management or monitoring software such as an IDS or a packet
+sniffer of analyzer. Port mirroring may require a lot of processing as the switch
+would be configured to make copies of all received frames. As such, certain
+configurations may filter packets based on specific criteria.
+
+>>Jumbo frames and Flow control
+JUMBO frames
+The standard payload has a maximum transmission unit of 1500 bytes. In order
+to optimize traffic processed by hosts such as SANs, and reduce the number of
+frames sent and received, JUMBO frames are used. JUMBO frames are ones
+with an MTU of 9000 bytes. When implementing JUMBO frames, it is critical
+that all nodes in a particular infrastructure including end-point devices and
+networking devices such as routers and switches are able to support JUMBO
+frames. The show interface command can tell us whether JUMBO frames are
+supported by a certain host. JUMBO frames or packets improve network
+performance and reduce latency.
+Flow control
+IEEE 802.3x flow control allows a server to instruct the switch to pause traffic
+temporarily to avoid overwhelming its buffer and causing it to drop frames. The
+switch can be configured to ignore PAUSE frames. The global PAUSE
+mechanism doesn’t distinguish between different types of traffic. The updated
+priority flow control (PFC) mechanism (IEEE802.1Qbb) allows PAUSE frames to
+apply to certain traffic classes only.
+Power Over Ethernet
+With Power Over Ethernet, you can use one ethernet cable to provide power
+and connectivity to a device. PoE is a means of supplying electrical power from
+a switch port over ordinary cabling to a connected powered device. PoE
+switches are referred to as endspan ( or endpoint ) power sourcing equipment (
+PSE ). Devices connected a port on a PoE switch either have PoE enabled or
+disabled.
+
+>>Troubleshooting Ethernet networks
+Network troubleshooting methodology
+As a networking professional, you will often be assigned the responsibility of
+fixing various kinds of hardware or software issues. For that, you have to
+adhere to a standardized methodology divided into multiple steps.
+1. Identify the problem
+>Initially, you have to define the scope of the problem. The scope refers to the
+area/number of users affected by the problem. Next, gather information that
+can help pinpoint to the source of the problem.  
+
+For instance: 
+Check vendor support pages online / their documentation  
+Check the system documentation for maintenance and installation logs  
+Consult any other technicians that may have worked on the system recently  
+>After that, you will have to look for symptoms in order to correlate them with specific issues.  
+Make a physical inspection  
+Check network logs or diagnostic software for information  
+Duplicate the problem on the user’s system or on a test system. Make sure you follow the same steps as the user.  
+>If you can’t reproduce the problem or identify symptoms, you have to resort to asking questions.  
+The best source of information is the person who reported the issue. The basis of getting troubleshooting information from users is asking good questions. 
+Questions are divided into two types: 
+Open ended questions that invite someone to explain in their own words. They help avoid assumptions and encourage the user to give all the information they have. Examples include “What is the problem?” 
+Closed questions that invite a yes/no response or a fixed answer. These questions can you help you narrow down to the issue.  
+>Now, you need to determine if anything has changed. Ask the users when the system/device stopped working. 
+You then need to determine what changed since it was last working. Check for documented changes using the system inventory as well as undocumented changed near the affected area.  
+>Approach multiple problems individually. This means that if the symptoms correlate with multiple issues, or if the user is encountering several problems that may be related to each other or one may be incidental to the other, then you have to work on solving one before the other. 
+Encourage users to initiate separate support tickets.  
+2. Establish a theory of probable cause  
+When you’ve gathered accurate information and clues, you’re in a good position to diagnose the problem. If the symptoms you previously collected are 
+Network plus 10
+associated with several issues, start testing them one by one. You could consider two different styles of approaching troubleshooting: 
+Question the obvious. This approach can quickly identify obvious oversights such as a network cable not being plugged in.  
+Methodically prove the functionality of each component in sequence 
+>Top-to-Bottom/Bottom-to-Top OSI Model Approach 
+Methodical validation of network components can be approached by testing at each 
+layer of the OSI model in sequence. There are many components which go to make 
+up a network. 
+Some, or several, of these components may be at fault when a problem is reported 
+to you. It is important that you tackle the problem logically and methodically. Unless a problem is trivial, break the troubleshooting process into 
+compartments and starting testing the different parts of a system using the OSI model as a guide. 
+
+For instance, if you’re troubleshooting a user’s workstation, approach it in this way: 
+-Check if the issue is hardware or software related 
+-If it’s hardware, check which of the parts at the physical layer aren’t working. 
+-After determining the component at fault (e.g cable), replace it with a good one.  
+>Divide and conquer approach  
+In this type of approach, you start testing at the layer most likely to be causing the problem and then either work up or down depending on the results of your tests.  
+3. Test the theory to determine the cause  
+If you can’t prove the cause of the problem, you’ll either have to create a new theory and test it or escalate the issue. 
+Escalation means referring the problem to a senior technician or third party if you are unable to solve it. 
+Escalation takes place due to one of these reasons: 
+-The problem being dealt with is out of the scope of your expertise  
+-The problem is falls under a warranty and would be better dealt with by a supplier.  
+-The customer/user starts being abusive  
+-The scope of the problem is very large and requires a lot of 
+changes/reconfigurations within the network  
+Some of the alternatives for escalation include: 
+• Senior staff, knowledge experts, subject matter experts, technical staff, developers, programmers, and administrators within your company. 
+• Suppliers and manufacturers. 
+• Other support contractors/consultants. 
+4. Establish a plan of action  
+If you successfully determined the cause of the issue and chose not to escalate it, then the next step would be trying to resolve the problem by establishing an action plan. 
+An action plan sets out the step you will take to solve the problem. There are typically three solutions to any problem: 
+-repair  
+Determine whether the cost of repair/time taken to fix makes repair the best option 
+-replace  
+It may be time consuming and costly if the part isn’t available on premises.
+-ignore  
+Not all problems are critical. Either find a workaround or document it and move on.  
+It is important to consider the time and cost of any of the above solutions before implementing it. Another thing to consider is the undesirable effects a specific change or configuration may have on the rest of the system.  
+5. Implement the solution  
+The solution to a problem might just involve resetting a system to a baseline configuration. If that’s the solution, then implementing it directly is possible. 
+However, if the solution requires implementing serious changes to the network environment, you are likely to have to follow a change management plan. 
+Sometimes, if you aren’t authorized to implement a specific fix, you’ll have to escalate it to a senior personnel. If applying a change to a network can cause disruptions to the users, then you’ll need to schedule it at a time when business operations/activities are least likely to be interrupted such as a weekend morning. 
+If you’re applying a series of changes, make sure to document them.  
+6. Verify Full System Functionality and Implement Preventive Measures 
+After applying a solution, validate that it fixes the issue, and that the system continues to function as normal and that there aren’t any unintended impacts on the environment. Before you consider that a problem is solved, ensure that you get the customer’s acceptance that the issue was fixed. 
+Then, confirm with the customer that the incident log will be closed. To fully resolve any issue, eliminate any factors that may induce its recurrence or implement solutions that will avoid it.  
+7. Document findings, actions, and outcomes  
+Most troubleshooting takes place within the context of a ticket system. A ticket shows who is responsible for fixing an issue and whether it has been resolved or not. The person responsible for a specific ticket can add a description of the problem among other details including the findings, actions, and outcomes. 
+This is helpful for future references when issues of the same category appear. 
+It can also assist in determining what type of issues affect a network 
+environment the most. Write clearly and concisely, and avoid spelling and grammatical mistakes.  
+
+>Troubleshoot common cable connectivity issues 
+In this topic, you will investigate some common issues that can affect cabled networks and identify the tools and techniques that can be used to solve problems at the physical and data link layers. 
+Specification and Limitations  
+When troubleshooting a link, you have to compare the expected performance with the actual current performance. As such, you must understand speed, throughput, and distance specifications and limitations.  
+Speed vs Throughput  
+A signal transmitted over a cable consists of a series of events called symbols. Symbols are either a pulse of a higher voltage for electrical current or the transition between the peak and the trough in an electromagnetic wave.
+The number of symbols that can be transmitted per second is called the baud rate. Baud rate is measured in hertz ( or MHz or GHz ). At the data link layer, we measure the bit rate. It refers to the amount of information that can be 
+transmitted over a link. We call this the bandwidth. In Ethernet terms, the speed is the expected performance of a link that has been properly installed to operate at 10 Mbps, 100 Mbps, 1 Gbps, or better. 
+On the other hand, throughput refers to the actual amount of data transferred or which can pass through a link. Throughput is an average data transfer rate achieved over a period of time excluding encoding schemes, errors, and other losses incurred at the physical and data link layers. 
+Another important network characteristic which affects performance is speed. Speed is measured as a unit of time typically 
+milliseconds (ms)—and is also referred to as latency, or delay. Latency can occur at many layers of the OSI model. It is not usually a critical factor on local Ethernets, however.  
+Distance limitation, attenuation, and noise 
+Each type of media can support a given bit rate only over a defined distance. Attenuation and noise enforce distance limitations on different types of media.  
+-Attenuation is the loss of signal strength, expressed in decibels (dB). In case of attenuation, dB expresses the ratio between signal strength at origin and signal strength at destination. . 
+-Noise is anything that gets transmitted close to the media channel that isn’t the intended signal. This is expressed as the signal to noise ratio (SNR).  
+Cable Issues 
+When troubleshooting cable connectivity, you are focusing on issues at the Network plus 14
+
+physical 
+layer. At layer one, a typical Ethernet link for an office workstation includes the following components: 
+• Network transceiver in the host (end system). It is on the network interface card. 
+• Patch cable between the host and a wall port.  
+• Structured cable between the wall port and a patch panel (the permanent link). 
+• Patch cable between the patch panel port and a switch port. ( also called patch cord ) 
+• Network transceiver in the switch port (intermediate system). 
+The entire cable path (patch cords plus permanent link) is referred to as a channel link. 
+If you are dealing with link failure ( complete loss of connectivity ), the first step would be to check if the patch cords or cables at the terminating end are configured correctly. 
+If you suspect there’s an issue with the patch cord, substitute it with another one. 
+If the problem isn’t with the patch cord, test the transceivers. Use a loopback tool to check for issues with network 
+transceivers. When you use a loopback adapter or plug, the packets sent by the NIC are received by itself.  
+Status indicators  
+
+Another approach when troubleshooting link or connectivity issues is to check link lights or LED status indicators on the NIC at one end and on the 
+switch/router on the other end. Switches consist of multiple LEDs to monitor activity, performance, power supply, and status of the fan tray assembly. 
+You will need the vendor documentation to interpret the LEDs. 
+On a switch port, the following LED link states are typical: 
+• Solid green—The link is connected but there is no traffic. 
+• Flickering green—The link is operating normally (with traffic). 
+• No light—The link is not working or is disconnected at the other end. 
+• Blinking amber—A fault has been detected (duplex mismatch or spanning tree blocking, for instance). 
+• Solid amber—The port is disabled 
+If there aren’t any hardware failure issues, you’ll have to verify the settings on the switch port and NIC. Autonegotiation is a feature of networking devices which allows the ports to communicate with the device on the other end of the link and determine the optimal duplex mode. Duplex refers to how data flows on the interface. Auto-negotiation has to be configured on both devices so that they are able to determine the best mode which both will operate in. Most adapters and switches successfully auto negotiate port settings. If this process fails, the adapter and port can end up with mismatched speed or duplex settings.  
+
+Cable Testers 
+While troubleshooting permanent links, verify that the cable type is appropriate for the application. Check if an unshielded cable is installed where a shielded or screened one would be more suitable. Also, ensure that the cable jacket type is the correct one for the installation location. ( plenum-rated for plenum space and riser-rated for riser space ). If the cable isn’t accessible to check for such details, use cable testing tools to diagnose performance issues. Identifying errors after installation and termination of connections is much simpler than having to deal with them later. 
+A cable tester reports detailed information on the physical and electrical properties of the cable. For example, it can test and report on cable conditions, crosstalk, attenuation, noise, resistance, and other characteristics of a cable run. Devices classed as certifiers can be used to test and certify cable 
+installations to a performance category—for example, that a network is TIA/EIA 568 Category 6A compliant. They use defined transport performance 
+specifications to ensure an installation exceeds the required performance characteristics for parameters such as attenuation and crosstalk. In other words, cable certifiers are advanced tools used to perform full compliance tests for cat5e/cat6A ( FLUKE). Certifiers expand the capabilities of basic wire map testers.  
+
+A cable tester might implement the function of a time domain reflectometer (TDR). It sends a signal of a specified amplitude and duration and checks for issues such as short circuits, sharp bends, and other imperfections which may influence performance. Reflections in the cable signal such issues. Since the TDR checks the cable run length, it is able to identify where the fault of the cable exactly is.  
+If a cable tester or certified device isn’t available, a multimeter can be used instead. A multimeter is utilized to test for various types of issues. 
+Understanding how to interpret multimeter reading is important to diagnosing problems and solving them. A multimeter mainly checks for basic electrical issues such as continuity or short circuits and not pins matched incorrectly.  
+There is also tone generator. A tone generator is made up of two tools. If you want to identify the end of a cable connected to a patch panel, you’d use this tester which injects a signal into the cable using one of the tools on one end, 
+and receives the signal using the second tool on the other end. The first one is the probe and the second one is the tone generator.  
+
+
+Cable issues or problems ( for wire-map testers ) : 
+Open pair: In this type of problem, there is an absence of a connection because of cable damage or because the connector is not properly wired to the cable end.  
+Short: two conductors that should be separate are touching at some point. May be caused by bent pins or a crushed cable or damaged insulation. 
+Reversed pair: the two wires of one pair are wired to different terminals ( pin 3 to pin 6 and pin 6 to pin 3 instead of pin 3 to 3 and pin 6 to 6 ). In other words, the conductors are reversed.  
+Crossed pair: two conductors of one pair are connected to pins belonging to another pair.  
+
+Additional problems detected by certifiers: 
+Split pair: each conductor of a pair is matched with a conductor of another pair 
+Untwisted pair/ bad termination: the ends of wires aren’t crimped correctly or twisted correctly at the near end.  
+Attenuation and Interference issues  
+Attenuation, measured in decibels (dB), is the loss of signal strength . Higher dB means a weaker signal. The farther a signal moves along a transmission link, the weaker it gets. It is also called insertion loss and is calculated as the ratio of received signal to the sent signal.  
+In copper cables, it is cause by long cables, high-frequency signals, and temperature/environment heat or moisture. In fiber cables, it is caused by bends which cause light to leak out, dirty connectors that block light, and bends to the cable.  
+Interference 
+Cable interference can refer to electrical or electromagnetic signals that interfere with other signals. It only affects copper cables and not fiber ones. Cross talk is a type of interference which affects nearby wires within the same cable. There are various types of crosstalk. NEXT (near end crosstalk) is interference from one pair to another at the transmitting side. FEXT (far end crosstalk) is interference from one pair to another at the receiving side. Near end is caused by the untwisted section of the cable at the terminal, near the connector. The signal is also strongest near the transmitting side.  
+-ACR (Attenuation-to-crosstalk ratio )  
+Attenuation or insertion loss is how much the signal weakens  
+Crosstalk is a signal interfering with another in a nearby wire  
+ACR= Attenuation - Crosstalk  
+High ACR means that the signal strength is much stronger than crosstalk so less errors 
+Low ACR means that the signal strength is barely stronger than crosstalk so more errors  
+ACRN is for NEXT (near end crosstalk). It checks whether the cable will have to deal with errors near the source.  
+Network plus 21
+ACRF is for FEXT ( far end crosstalk). It is measured at the receiving end. It checks the performance of the cable independent of the cable length.  
+Power sum: when multiple pairs are active (Gigabit/10G), check total 
+interference instead of one pair only.  
+-Cable application issues: 
+When dealing with patch panels or legacy devices, you need to account for the proper cable application. There are two main formats for patch cord or cables: 
+Straight through patch cords used to connect two devices of different types Crossover patch cords used to connect two devices of the same type 
+Today, most modern NICs, switches, and routers implement auto MDI/MDIX so that straight-through cables can always be used.  
+-Rollover cable/Console cable  
+It is a type of cable used to connect a PC or laptop terminal to the console port of a switch or router. It used during the initial set up of a networking device. Console cables are light blue in color to help distinguish them from other types of cables. A legacy console cable has a serial DB-9 connector for the PC end. Most modern PCs, however, now use a USB connector and port. The console port on the appliance is a stand RJ-45 jack. A terminal program such as PutTTY or linux or the macOS terminal on the PC is used for configuration 
+management.  
+
+-Power over ethernet  
+PoE allows an ethernet cable to transmit electricity along with data. This is to power devices without a power adapter. For instance a single cat 5e cable can provide an access point with a network connection plus electricity.  
+Minimum cable categories: 
+PoE (normal): Cat3 or better 
+PoE+: Cat5e or better 
+Running power through the cables will produce heat. The higher the current the more heat. If the heat doesn’t dissipate, it will damage the cables and data flow. Pure copper cables with large conductors are able to deal with heat more efficiently as they reduce resistance which as a result reduces heat.  
+-Fiber optic cable testing tools 
+Fiber cables also suffer from signal strength loss from one end of the 
+connection to the other. Fiber uses light pulses which travel through glass or plastic core, surrounded by cladding that reflects light back. If there are any impurities in the glass or plastic, they will absorb the light. A splice is a 
+connection between two fiber cables. Any imperfection in the splice can affect the transmission of light. If you need to see how strong the fiber light at the end is compared to the start, you can use an optical source along with an optical power meter/ fiber meter. The optical source is a small device which sends light pulses along the fiber. The optical meter will measure how much light pulses come out of the other end. The two are sold together as a testing kit. If a fiber is broken somewhere, an Optical Time Domain Reflectometer is used to identify the location of the damage.  
+An optical spectrum analyzer (OSA) is used to measure the different colors (wavelengths) of light in a fiber. Each different color carries a separate channel of data. The OSA tells you how strong each color is at the receiving end. At long distances, signal loss strength of different wavelength varies. 
+This is referred to as spectral attenuation.  
+-Dirty optical cables 
+If there is dust around the connector, signal strength will be reduced and transmission can sometimes be blocked completely. Connectors must have a 
+Network plus 23
+dust cap when removed. Clean them regularly using a solvent, but don’t apply too much. Apply some of the solvent on a dry cloth and clean the connector with it. If you’re splicing fiber cables, make sure that the splicing equipment is clean.  
+-Incorrect transceivers  
+A transceiver is a device which converts electrical signals to light for 
+transmission and converts light to electrical signal for reception. Each receiver is designed for a specific wavelength. Transceivers are also either designed for SMF or MMF. Patch cords also need to match the fiber type.  
+-IPv4 Addressing  
+Introduction 
+The physical and data link layers link nodes on a local network. At the network layer ( layer 3 ), individual networks can be connected together into a network of networks, or internetwork. 
+The TCP/IP suite consists of protocols and standards which work together to provide the functionalities of modern 
+networks. The IP ( Internet Protocol) is responsible for providing logical 
+addressing and packet forwarding between different networks.  
+IPv4 datagram header  
+Ethernet works at the physical and data link layers ( layers 1 and 2 ). Ethernet is a single network segment or broadcast domain. Ethernet, and other layer 1/ layer 2 products, have no concept of multiple networks or of logical divisions with a network. 
+The Internet Protocol operating at layer 3 provides logical network addressing and forwarding.  
+The Internet Protocol (IP) header of a packet contains fields to manage the logical addressing and forwarding function. 
+
+The version field indicates the protocol version in use (either 4 or 6) 
+The length fields indicate the size of the header and the total packet size ( including the payload ). The maximum size is 65,535 bytes, but packets are usually smaller to avoid fragmentation.  
+The protocol field contains a number that identifies which layer 4 packet is inside the IP packet. For most packets, the protocol field either indicates a TCP segment or a UDP datagram. The values assigned to protocols are managed by IANA. This field describes what’s contained in the packet so that the receiving host knows how to process it.  
+There are also other protocols that run directly on IP such as: 
+ICMP for connectivity testing/error reporting  
+IGMP for multicasting  
+GRE for some VPN implementations  
+ESP and AH with IPSec  
+EIGP and OSPF used to send information among routers  
+
+
